@@ -1,10 +1,17 @@
-html{
+*{
     font-family: 'Roboto', sans-serif;
 }
 
+header {
+    position: relative;
+}
+
 nav {
+    position: fixed;
     height: 51px;
-background-color: #212121;
+    width: 100%;
+    background-color: #212121;
+    z-index: 2;
 }
 
 .menu {
@@ -26,4 +33,178 @@ background-color: #212121;
 .menu .menu_item {
     border-right: 2px dotted white;
     padding-right: 47px;
+}
+
+.subheader {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    min-height: 84px;
+    background-color: rgba(0, 0, 0, .6); /* вместо opacity используем альфа канал, чтобы был прозрачным только фон а не все внутри блока */
+}
+
+.subheader .subheader_logo {
+    display: block;
+    max-width: 100%; /* теперь при любом размере картинки она не вылезет за размеры колонки */
+    margin-top: 16px;
+}
+
+.subheader .subheader_official {
+    margin-top: 6px;
+    opacity: 0.5;
+    font-size: 13px;
+    line-height: 12px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.subheader .subheader_call {
+    margin-top: 19px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 12px;
+    color: #ffffff;
+    text-align: right;
+}
+
+.subheader .subheader_phone {
+    display: block;
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: right;
+}
+
+.subheader .subheader_btn {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    color: #ffffff;
+    width: 178px;
+    border-radius: 4px;
+    height: 52px;
+    background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);
+    border: none
+}
+
+.promo {
+    min-height: 800px;
+    background: url(../img/main/background1.jpg) center center/cover no-repeat;
+    padding: 150px 0 135px 0;
+}
+
+.promo .promo_header {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+}
+
+.promo .promo_subheader {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.promo .promo_descr {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-top: 23px;
+    text-align: center;
+}
+
+.promo .promo_btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 115px;
+    width: 265px;
+    height: 69px;
+    background-image: linear-gradient(0.0deg, #1eacc7 0%, #4ce2ff 100%);
+    font-size: 18px;
+    line-height: 68px;
+    border-radius: 4px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    color: #ffffff;
+    border: none
+
+}
+
+.reasons {
+    min-height: 900px;
+    padding: 71px 0 65px 0;
+}
+
+.reasons .reasons_label {
+    margin: 0 auto;
+    text-align: center;
+    width: 112px;
+    height: 24px;
+    background-color: #000000;
+    font-size: 11px;
+    line-height: 24px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+
+.reasons .reasons_title {
+    margin-top: 38px;
+    font-size: 38px;
+    line-height: 29px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    text-align: center;
+}
+
+.reasons .reasons_block {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+.reasons .reasons_round {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 113px;
+    height: 113px;
+    background-color: #1eacc7;
+    border-radius: 50%;
+    margin-right: 26px;
+}
+
+.reasons .reasons_descr {
+    width: 343px;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_subtitle {
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #1eacc7;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_text {
+    font-size: 15px;
+    font-weight: 300;
+    color: #202020;
 }
