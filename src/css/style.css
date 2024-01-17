@@ -151,7 +151,7 @@ nav {
     padding: 71px 0 65px 0;
 }
 
-.reasons .reasons_label {
+.label {
     margin: 0 auto;
     text-align: center;
     width: 112px;
@@ -165,7 +165,7 @@ nav {
 
 }
 
-.reasons .reasons_title {
+.title {
     margin-top: 38px;
     font-size: 38px;
     line-height: 29px;
