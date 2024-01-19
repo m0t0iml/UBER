@@ -1,5 +1,11 @@
 $color_one: #1eacc7
 $color_two: #ff5656
+
+=btn_hover
+	&:hover
+		background-image: none
+		background-color: $color_one
+
 *
 	font-family: 'Roboto', sans-serif
 
@@ -20,13 +26,13 @@ nav
 	margin: 0
 	list-style: none
 
-	.menu_link
+	&_link
 		font-size: 15px
 		font-weight: 300
 		color: #ffffff
 		text-decoration: none
 
-	.menu_item
+	&_item
 		border-right: 2px dotted white
 		padding-right: 47px
 
@@ -37,12 +43,12 @@ nav
 	min-height: 84px
 	background-color: rgba(0, 0, 0, 0.6)
 
-	.subheader_logo
+	&_logo
 		display: block
 		max-width: 100%
 		margin-top: 16px
 
-	.subheader_official
+	&_official
 		margin-top: 6px
 		opacity: 0.5
 		font-size: 13px
@@ -50,7 +56,7 @@ nav
 		font-weight: 100
 		color: #ffffff
 
-	.subheader_call
+	&_call
 		margin-top: 19px
 		font-size: 12px
 		font-weight: 300
@@ -58,7 +64,7 @@ nav
 		color: #ffffff
 		text-align: right
 
-	.subheader_phone
+	&_phone
 		display: block
 		margin-top: 8px
 		font-size: 22px
@@ -69,7 +75,7 @@ nav
 		text-decoration: none
 		text-align: right
 
-	.subheader_btn
+	&_btn
 		margin-top: 16px
 		font-size: 14px
 		font-weight: 400
@@ -81,13 +87,14 @@ nav
 		height: 52px
 		background-image: linear-gradient(0deg, $color_one 0%, #4ce2ff 100%)
 		border: none
+		+btn_hover
 
 .promo
 	min-height: 800px
 	background: url(../img/main/background1.jpg) center (center / cover) no-repeat
 	padding: 150px 0 135px 0
 
-	.promo_header
+	&_header
 		font-size: 60px
 		line-height: 60px
 		font-weight: 900
@@ -96,7 +103,7 @@ nav
 		margin: 0
 		text-align: center
 
-	.promo_subheader
+	&_subheader
 		font-size: 36px
 		line-height: 36px
 		font-weight: 700
@@ -105,7 +112,7 @@ nav
 		margin-top: 22px
 		text-align: center
 
-	.promo_descr
+	&_descr
 		font-size: 18px
 		line-height: 24px
 		font-weight: 400
@@ -113,7 +120,7 @@ nav
 		margin-top: 23px
 		text-align: center
 
-	.promo_btn
+	&_btn
 		display: block
 		margin: 0 auto
 		margin-top: 115px
@@ -128,6 +135,7 @@ nav
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2)
 		color: #ffffff
 		border: none
+		+btn_hover
 
 .reasons
 	min-height: 900px
@@ -162,12 +170,12 @@ nav
 	text-align: center
 
 .reasons
-	.reasons_block
+	&_block
 		display: flex
 		justify-content: center
 		margin-top: 35px
 
-	.reasons_round
+	&_round
 		display: flex
 		justify-content: center
 		align-items: center
@@ -177,16 +185,16 @@ nav
 		border-radius: 50%
 		margin-right: 26px
 
-	.reasons_descr
+	&_descr
 		width: 343px
 
-		.reasons_subtitle
+		&_subtitle
 			font-size: 17px
 			line-height: 21px
 			font-weight: 400
 			color: $color_one
 
-		.reasons_text
+		&_text
 			font-size: 15px
 			font-weight: 300
 			color: #202020
@@ -238,6 +246,28 @@ nav
 			border-radius: 100%
 			padding: 6px
 			cursor: pointer
+			&::before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $color_one
+				transition: 0.5s all				
+			&::after
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				content: ''
+				display: block
+				width: 2px
+				height: 14px
+				background-color: $color_one
+				transition: 0.5s all
+			&:hover
+				&::before, &::after
+					background-color: $color_two
+					
+
 .choice
 	min-height: 896px
 	background: url('../img/choice/black_white.jpg') center (center / cover) no-repeat
@@ -259,3 +289,66 @@ nav
 		font-weight: 300
 		color: #222222
 		text-align: center
+
+.require
+	padding: 68px 0 84px 0
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0px
+	&_title
+		font-size: 22px
+		font-weight: 400
+		color: #1ca8c3
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 22px
+		li
+			position: relative
+			font-size: 17px
+			font-weight: 300
+			color: #222222
+			margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				left: -32px
+				top: 3px
+				width: 21px
+				height: 20px
+				background: url('../icons/conditions/icon_tick.png') center (center / cover) no-repeat
+	&_descr
+		font-size: 17px
+		font-weight: 300
+		color: $color_one
+	
+	.warning
+		.require_title
+			color: $color_two
+		.require_list
+			li
+				&::before
+					background: url('../icons/conditions/tick_perl.png') center (center / cover) no-repeat	
+
+.world
+	min-height: 717px
+	padding: 49px 0
+	background: url('../img/worldwide/Night_land.jpg') center (center / cover) no-repeat
+	.label
+		background-color: #ffffff
+		color: #070716
+	.title
+		color: #ffffff
+	.subtitle
+		color: #ffffff
+	&_ref
+		display: block
+		font-size: 15px
+		font-weight: 400
+		text-transform: uppercase
+		color: #1fbad6
+		text-align: center
+		margin-top: 486px
+		text-decoration: none
+
