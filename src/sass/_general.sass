@@ -8,6 +8,9 @@ nav
 	background-color: #212121
 	z-index: 2
 
+.hamburger
+	display: none
+
 .menu
 	display: flex
 	justify-content: space-between
@@ -179,16 +182,16 @@ nav
 	&_descr
 		width: 343px
 
-		&_subtitle
-			font-size: 17px
-			line-height: 21px
-			font-weight: 400
-			color: $color_one
+	&_subtitle
+		font-size: 17px
+		line-height: 21px
+		font-weight: 400
+		color: $color_one
 
-		&_text
-			font-size: 15px
-			font-weight: 300
-			color: #202020
+	&_text
+		font-size: 15px
+		font-weight: 300
+		color: #202020
 
 .mobile
 	min-height: 864px
@@ -402,3 +405,5 @@ nav
 		display: flex
 		justify-content: flex-end
 		flex: 1
+.xs-visible
+	display: none
